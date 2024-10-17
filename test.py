@@ -12,9 +12,9 @@ import streamlit as st
 import os
 import time
 
-# load_dotenv()
-# os.getenv("GOOGLE_API_KEY")
-# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+load_dotenv()
+os.getenv("GOOGLE_API_KEY")
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 
 def get_pdf_text(pdf_docs):
@@ -141,8 +141,8 @@ def main():
 
 if __name__ == "__main__":
     
-    with st.sidebar:
-        API_KEY = st.text_input("Please fill the GOOGLE_API_KEY", type="password")
-        genai.configure(api_key=API_KEY)
+    # with st.sidebar:
+    #     API_KEY = st.text_input("Please fill the GOOGLE_API_KEY", type="password")
+    #     genai.configure(api_key=API_KEY)
 
     main()
